@@ -2,7 +2,6 @@ package br.com.sistemadashboard.model;
 
 public final class Funcionario implements Desenvolvedor {
 	
-	private String numeroDeMatricula;
 	private DadosPessoais dadosPessoais;
 	private Funcionario gestor;
 	
@@ -10,20 +9,10 @@ public final class Funcionario implements Desenvolvedor {
 		
 	}
 
-	public Funcionario(String numeroDeMatricula, DadosPessoais dadosPessoais, Funcionario gestor) {
+	public Funcionario(DadosPessoais dadosPessoais, Funcionario gestor) {
 		this.dadosPessoais = dadosPessoais;
-		this.numeroDeMatricula = numeroDeMatricula;
 		this.gestor = gestor;
 	}
-
-	public String getNumeroDeMatricula() {
-		return numeroDeMatricula;
-	}
-
-	public void setNumeroDeMatricula(String numeroDeMatricula) {
-		this.numeroDeMatricula = numeroDeMatricula;
-	}
-	
 
 	public DadosPessoais getDadosPessoais() {
 		return dadosPessoais;
@@ -44,7 +33,6 @@ public final class Funcionario implements Desenvolvedor {
 	@Override
 	public String toString() {
 		return "\nFuncionario: " + dadosPessoais
-			 + "\nMatricula: " + numeroDeMatricula
 			 + "\nGestor: "+ gestor.dadosPessoais.getNome();
 	}
 	

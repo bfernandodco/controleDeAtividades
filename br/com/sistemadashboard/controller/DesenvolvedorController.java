@@ -1,5 +1,5 @@
 package br.com.sistemadashboard.controller;
 
-public class Controller {
+public class DesenvolvedorController {
 
 }

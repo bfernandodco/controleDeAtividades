@@ -7,6 +7,7 @@ public abstract class DadosPessoais {
 	private String nome;
 	private LocalDate dataDeNascimento;
 	private String cpf;
+	private String numeroDeMatricula;
 	private Ambiente ambienteDeDominio;
 	
 	public DadosPessoais() {
@@ -14,10 +15,11 @@ public abstract class DadosPessoais {
 	}
 
 	public DadosPessoais(String nome, LocalDate dataDeNascimento, String cpf,
-			Ambiente ambienteDeDominio) {
+			String numeroDeMatricula, Ambiente ambienteDeDominio) {
 		this.nome = nome;
 		this.dataDeNascimento = dataDeNascimento;
 		this.cpf = cpf;
+		this.numeroDeMatricula = numeroDeMatricula;
 		this.ambienteDeDominio = ambienteDeDominio;
 	}
 
@@ -45,6 +47,14 @@ public abstract class DadosPessoais {
 		this.cpf = cpf;
 	}
 
+	public String getNumeroDeMatricula() {
+		return numeroDeMatricula;
+	}
+
+	public void setNumeroDeMatricula(String numeroDeMatricula) {
+		this.numeroDeMatricula = numeroDeMatricula;
+	}
+
 	public Ambiente getAmbienteDeDominio() {
 		return ambienteDeDominio;
 	}
@@ -59,7 +69,8 @@ public abstract class DadosPessoais {
 			 + "\nData de Nascimento: " + dataDeNascimento.getDayOfMonth() + " de " 
 					+ dataDeNascimento.getMonth() + " de " + dataDeNascimento.getYear()
 			 + "\nCPF: " + cpf 
-			 + "\nAmbiente de Dominio=" + ambienteDeDominio;
+			 + "\nNúmero de Matrícula: " + numeroDeMatricula
+			 + "\nAmbiente de Dominio: " + ambienteDeDominio;
 	}
 
 }

@@ -2,7 +2,6 @@ package br.com.sistemadashboard.model;
 
 public final class Estagiario implements Desenvolvedor {
 
-	private String numeroDoContrato;
 	private Funcionario orientador;
 	private DadosPessoais dadosPessoais;
 	
@@ -10,18 +9,9 @@ public final class Estagiario implements Desenvolvedor {
 		
 	}
 	
-	public Estagiario(String numeroDoContrato, Funcionario orientador, DadosPessoais dadosPessoais) {
-		this.numeroDoContrato = numeroDoContrato;
+	public Estagiario(Funcionario orientador, DadosPessoais dadosPessoais) {
 		this.orientador = orientador;
 		this.dadosPessoais = dadosPessoais;
-	}
-
-	public String getNumeroDoContrato() {
-		return numeroDoContrato;
-	}
-
-	public void setNumeroDoContrato(String numeroDoContrato) {
-		this.numeroDoContrato = numeroDoContrato;
 	}
 
 	public Funcionario getOrientador() {
@@ -43,8 +33,7 @@ public final class Estagiario implements Desenvolvedor {
 	@Override
 	public String toString() {
 		return "\nEstagiário: " + dadosPessoais
-			 + "\nNúmero do Contrato: " + numeroDoContrato 
-			 + "\nOrientador=" + orientador;
+			 + "\nOrientador: " + orientador;
 	}
 
 	@Override
